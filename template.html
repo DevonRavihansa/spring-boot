@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+
+<body ng-app="app">
+
+    <nav th:replace="fragments/header :: topNavigation">Navigation</nav>
+
+    <div class="container py-5">
+
+        <!--page-content-->
+        <div th:replace="@{'views/' + ${content}} :: ${content}">Content</div>
+        <!--/page-content-->
+
+    </div>
+
+    <footer th:replace="fragments/footer :: footer">Footer</footer>
+
+    <div th:replace="fragments/footer :: scripts">Scripts</div>
+
+</body>
+</html>
